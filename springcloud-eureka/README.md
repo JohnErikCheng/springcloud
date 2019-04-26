@@ -39,6 +39,6 @@ spring:
     name: springcloud-eureka
 ```
 ######四、启动类上添加注解
->**@EnableEurekaServer**
+> **@EnableEurekaServer**
 #####五、访问
 > http://ip:port
