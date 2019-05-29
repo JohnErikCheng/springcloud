@@ -1,5 +1,6 @@
 package com.cheng.erik.john.intface;
 
+import com.cheng.erik.john.controller.HystrixClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @Date ：Created in 2019/5/29 16:02
  * @Description:
  */
-@FeignClient("ribbon-provider")
+@FeignClient(value = "ribbon-provider",fallbackFactory = HystrixClientFallbackFactory.class)
 public interface HomeClient {
     @GetMapping("/ribbon")
     String consumer();
