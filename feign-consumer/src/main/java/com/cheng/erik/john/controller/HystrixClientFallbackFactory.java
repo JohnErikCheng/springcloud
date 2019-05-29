@@ -2,6 +2,7 @@ package com.cheng.erik.john.controller;
 
 import com.cheng.erik.john.intface.HomeClient;
 import feign.hystrix.FallbackFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * @ClassName ：HystrixClientFallbackFactory
@@ -10,6 +11,7 @@ import feign.hystrix.FallbackFactory;
  * @Date ：Created in 2019/5/29 17:11
  * @Description:
  */
+@Component
 public class HystrixClientFallbackFactory implements FallbackFactory<HomeClient> {
 
     @Override
