@@ -1,0 +1,11 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: springcloud-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/
+logging:
+  file: D:/Workpaces/IdeaWorkspace/springcloud/ribbon.log
