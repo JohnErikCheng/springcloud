@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zuul-filter
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:20000/eureka/
+
+server:
+  port: 20080
+
+zuul:
+  routes:
+    api:
+      path: /**
+      serviceId: ribbon-provider
