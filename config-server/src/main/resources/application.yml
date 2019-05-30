@@ -1,0 +1,21 @@
+server:
+  port: 20090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:20000/eureka/
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/JohnErikCheng/springcloud.git
+          search-paths: config-sever
+#          username: dong@19910925@126.com
+#          password: dong1230
